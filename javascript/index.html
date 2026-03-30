@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Chatbot IA en la nube | Milner Noguera</title>
+    <title>Chatbot IA real | Milner Noguera</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 -->
@@ -29,7 +29,6 @@
             padding: 0 24px;
         }
 
-        /* Header / Nav */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -52,7 +51,6 @@
             background: rgba(56, 189, 248, 0.1);
             padding: 8px;
             border-radius: 18px;
-            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15);
         }
 
         .logo h1 {
@@ -100,7 +98,6 @@
             color: white !important;
         }
 
-        /* Hero Section */
         .hero {
             display: flex;
             flex-wrap: wrap;
@@ -123,7 +120,6 @@
             font-weight: 600;
             display: inline-block;
             margin-bottom: 20px;
-            backdrop-filter: blur(4px);
         }
 
         .hero-content h2 {
@@ -142,7 +138,6 @@
             font-size: 1.2rem;
             color: #94a3b8;
             margin-bottom: 30px;
-            max-width: 550px;
         }
 
         .cta-button {
@@ -177,10 +172,8 @@
             font-size: 180px;
             color: #38bdf8;
             opacity: 0.8;
-            filter: drop-shadow(0 12px 18px rgba(0,0,0,0.3));
         }
 
-        /* Features Section */
         .features {
             padding: 60px 0 40px;
         }
@@ -232,14 +225,12 @@
             color: #94a3b8;
         }
 
-        /* Chat Demo Section */
         .chat-demo {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(8px);
             border-radius: 48px;
             margin: 40px 0 60px;
             padding: 40px 30px;
-            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(56, 189, 248, 0.3);
         }
 
@@ -252,11 +243,6 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #f1f5f9;
-        }
-
-        .chat-header p {
-            color: #94a3b8;
         }
 
         .chat-container {
@@ -269,7 +255,7 @@
         .chat-messages {
             height: 380px;
             overflow-y: auto;
-            padding: 20px 20px 10px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -296,14 +282,12 @@
             border-radius: 24px;
             font-size: 0.95rem;
             line-height: 1.4;
-            word-break: break-word;
         }
 
         .user .bubble {
             background: #38bdf8;
             color: #0f172a;
             border-bottom-right-radius: 6px;
-            box-shadow: 0 2px 8px rgba(56, 189, 248, 0.3);
         }
 
         .bot .bubble {
@@ -326,17 +310,13 @@
             padding: 14px 18px;
             border: 1px solid #334155;
             border-radius: 48px;
-            font-size: 1rem;
-            outline: none;
-            transition: 0.2s;
-            font-family: inherit;
             background: #1e293b;
             color: #f1f5f9;
+            outline: none;
         }
 
         .chat-input-area input:focus {
             border-color: #38bdf8;
-            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
         }
 
         .chat-input-area button {
@@ -347,16 +327,13 @@
             border-radius: 48px;
             font-weight: 600;
             cursor: pointer;
-            transition: 0.2s;
             display: flex;
             align-items: center;
             gap: 8px;
-            font-family: inherit;
         }
 
         .chat-input-area button:hover {
             background: #0ea5e9;
-            transform: scale(0.97);
             color: white;
         }
 
@@ -364,8 +341,6 @@
             display: flex;
             justify-content: flex-end;
             margin-top: 12px;
-            gap: 16px;
-            padding: 0 8px;
         }
 
         .clear-btn {
@@ -377,7 +352,6 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: 0.2s;
         }
 
         .clear-btn:hover {
@@ -390,31 +364,15 @@
             padding: 12px 18px;
             border-radius: 20px;
             font-size: 0.85rem;
-            color: #cbd5e1;
             border-left: 4px solid #38bdf8;
         }
 
-        .api-note code {
-            background: #1e293b;
-            padding: 2px 8px;
-            border-radius: 20px;
-            font-family: monospace;
-            font-size: 0.85rem;
-            color: #38bdf8;
-        }
-
-        /* footer */
         footer {
             text-align: center;
             padding: 40px 0 30px;
             border-top: 1px solid rgba(56, 189, 248, 0.2);
             margin-top: 20px;
             color: #94a3b8;
-        }
-
-        footer a {
-            color: #38bdf8;
-            text-decoration: none;
         }
 
         @keyframes fadeSlide {
@@ -428,43 +386,16 @@
             }
         }
 
-        .chat-messages::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .chat-messages::-webkit-scrollbar-track {
-            background: #334155;
-            border-radius: 10px;
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb {
-            background: #475569;
-            border-radius: 10px;
-        }
-
         @media (max-width: 768px) {
-            .hero-content h2 {
-                font-size: 2.2rem;
-            }
-            .hero-illustration i {
-                font-size: 120px;
-            }
-            .navbar {
-                flex-direction: column;
-                text-align: center;
-            }
-            .message {
-                max-width: 95%;
-            }
-            .chat-demo {
-                padding: 20px;
-            }
+            .hero-content h2 { font-size: 2.2rem; }
+            .hero-illustration i { font-size: 120px; }
+            .navbar { flex-direction: column; text-align: center; }
+            .message { max-width: 95%; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
             <i class="fas fa-robot"></i>
@@ -479,12 +410,11 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <div class="hero">
         <div class="hero-content">
-            <span class="hero-badge"><i class="fas fa-cloud-upload-alt"></i> Desplegado en la nube</span>
-            <h2>Chatbot con IA <br>respuestas inteligentes</h2>
-            <p>Asistente virtual potenciado por inteligencia artificial, listo para integrarse en tus aplicaciones. Disponible 24/7 desde cualquier lugar.</p>
+            <span class="hero-badge"><i class="fas fa-cloud-upload-alt"></i> IA en la nube gratuita</span>
+            <h2>Chatbot con IA real <br>sin descargas pesadas</h2>
+            <p>Usa una API pública de inteligencia artificial. Responde instantáneamente, sin instalar nada, sin backend.</p>
             <a href="#demo" class="cta-button"><i class="fas fa-comment-dots"></i> Probar ahora</a>
         </div>
         <div class="hero-illustration">
@@ -492,44 +422,37 @@
         </div>
     </div>
 
-    <!-- Features Section -->
     <div class="features" id="features">
-        <h2 class="section-title">✨ Potencia del ecosistema cloud</h2>
+        <h2 class="section-title">✨ IA real, simple y gratuita</h2>
         <div class="features-grid">
             <div class="feature-card">
                 <i class="fas fa-cloud-upload-alt"></i>
-                <h3>Hosting Cloud</h3>
-                <p>Escalabilidad automática, alta disponibilidad y despliegue continuo en infraestructura serverless.</p>
+                <h3>API pública</h3>
+                <p>Usa el servicio de Popcat.xyz, que ofrece respuestas inteligentes sin necesidad de claves.</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-microchip"></i>
-                <h3>IA Generativa</h3>
-                <p>Respuestas contextuales, procesamiento de lenguaje natural y modelos de última generación.</p>
+                <i class="fas fa-bolt"></i>
+                <h3>Respuesta rápida</h3>
+                <p>Comunicación directa desde tu navegador, sin servidores intermedios.</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-code-branch"></i>
-                <h3>API lista</h3>
-                <p>Integración simple con REST API, lista para conectar a tu frontend, Slack, Discord o WhatsApp.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Seguridad</h3>
-                <p>Autenticación opcional, cifrado de datos y cumplimiento con estándares modernos.</p>
+                <i class="fas fa-download"></i>
+                <h3>Cero descargas</h3>
+                <p>No se instala nada, no se descargan modelos pesados. Solo HTML, CSS y JS.</p>
             </div>
         </div>
     </div>
 
-    <!-- Interactive Chatbot Demo Section -->
     <div class="chat-demo" id="demo">
         <div class="chat-header">
-            <h3><i class="fas fa-comment"></i> Chatea con el asistente IA</h3>
-            <p>Interfaz en tiempo real – Tu chatbot en la nube responde con inteligencia artificial</p>
+            <h3><i class="fas fa-comment"></i> Chatea con IA real</h3>
+            <p>Pregúntale cualquier cosa. Las respuestas son generadas por inteligencia artificial (API externa).</p>
         </div>
 
         <div class="chat-container">
             <div class="chat-messages" id="chatMessages">
                 <div class="message bot">
-                    <div class="bubble">✨ ¡Hola! Soy el asistente IA desplegado en la nube. Pregúntame sobre tecnología, consejos o simplemente conversemos. ¿En qué te ayudo?</div>
+                    <div class="bubble">✨ ¡Hola! Soy un asistente con IA real. Pregúntame lo que quieras, desde tecnología hasta consejos.</div>
                 </div>
             </div>
             <div class="chat-input-area">
@@ -541,26 +464,17 @@
             </div>
         </div>
         <div class="api-note">
-            <i class="fas fa-plug"></i> <strong>Conecta tu propia IA en la nube:</strong> actualmente el chat usa respuestas simuladas + IA local demostrativa. Para usar tu endpoint real, edita la variable <code>API_URL</code> dentro del código JavaScript (línea donde dice <code>// 🔧 CONFIGURACIÓN DEL ENDPOINT</code>). El formato esperado es JSON: <code>{ "reply": "tu respuesta" }</code>.
+            <i class="fas fa-info-circle"></i> <strong>IA real usando API pública:</strong> Esta demo usa <code>https://api.popcat.xyz/chat</code>, que proporciona respuestas de inteligencia artificial. Si el servicio está saturado, cae a un modo inteligente local. Todo sin descargas pesadas.
         </div>
     </div>
 
     <footer>
-        <p>🚀 Proyecto open-source | Desplegado en la nube con infraestructura escalable</p>
-        <p>📡 <a href="#">Documentación API</a> • <a href="#">Repositorio GitHub</a> • <i class="fas fa-heart" style="color:#38bdf8;"></i> IA conversacional</p>
-        <p style="margin-top: 12px; font-size: 0.8px;">&copy; 2025 Milner Noguera — Chatbot Cloud: inteligencia artificial en acción</p>
+        <p>🚀 IA real sin backend • Sin descargas • Gratuito</p>
+        <p>API: Popcat.xyz • Fallback local con respuestas inteligentes</p>
     </footer>
 </div>
 
 <script>
-    // ----------------------------------------------
-    // 🔧 CONFIGURACIÓN DEL ENDPOINT DEL CHATBOT EN LA NUBE
-    // ----------------------------------------------
-    // Reemplaza esta URL con la dirección real de tu API desplegada en la nube.
-    // Ejemplo: "https://mi-chatbot-cloud.azurewebsites.net/chat" o "https://tu-api-gateway.com/v1/chat"
-    // El endpoint debe aceptar POST con JSON { "message": "texto del usuario" } y responder { "reply": "respuesta generada" }
-    const API_URL = "https://mis-proyectos-web-six.vercel.app/api/chat";
-    
     // Elementos del DOM
     const chatMessagesDiv = document.getElementById('chatMessages');
     const userInput = document.getElementById('userInput');
@@ -568,7 +482,7 @@
     const clearBtn = document.getElementById('clearChatBtn');
     
     let isLoading = false;
-    
+
     function addMessage(text, isUser) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
@@ -578,9 +492,8 @@
         messageDiv.appendChild(bubble);
         chatMessagesDiv.appendChild(messageDiv);
         chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
-        return messageDiv;
     }
-    
+
     let typingIndicator = null;
     function showTypingIndicator() {
         if (typingIndicator) return;
@@ -589,7 +502,7 @@
         indicatorDiv.id = 'typingIndicator';
         const bubble = document.createElement('div');
         bubble.className = 'bubble';
-        bubble.innerHTML = '<i class="fas fa-ellipsis-h"></i> IA está pensando...';
+        bubble.innerHTML = '<i class="fas fa-ellipsis-h"></i> IA pensando...';
         indicatorDiv.appendChild(bubble);
         chatMessagesDiv.appendChild(indicatorDiv);
         chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
@@ -602,64 +515,37 @@
             typingIndicator = null;
         }
     }
-    
+
+    // Fallback local con respuestas inteligentes (si la API falla)
+    function getLocalReply(message) {
+        const msg = message.toLowerCase().trim();
+        if (msg.includes("hola") || msg.includes("buenas")) return "👋 ¡Hola! ¿En qué puedo ayudarte?";
+        if (msg.includes("cómo estás")) return "🌟 ¡Muy bien! Siempre listo para conversar. ¿Y tú?";
+        if (msg.includes("qué puedes hacer")) return "🧠 Puedo responder preguntas, darte ideas, hablar de tecnología y más. ¡Pregúntame!";
+        if (msg.includes("nube") || msg.includes("cloud")) return "☁️ Este chatbot usa una API en la nube para darte respuestas inteligentes.";
+        if (msg.includes("api")) return "🔌 La API es gratuita y no requiere clave. Es ideal para demostraciones.";
+        if (msg.includes("gracias")) return "😊 ¡De nada! Estoy para ayudarte.";
+        if (msg.includes("quien te creo")) return "👨‍💻 Me creó Milner Noguera, con ayuda de inteligencia artificial y una API pública.";
+        return `🤖 (Modo local) Recibí tu mensaje: "${message}". Si quieres respuestas más variadas, asegúrate de tener conexión a internet para usar la API real.`;
+    }
+
     async function getBotReply(userMessage) {
-        if (API_URL && API_URL.trim() !== "") {
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify({ message: userMessage })
-                });
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                const data = await response.json();
-                if (data.reply) return data.reply;
-                if (data.response) return data.response;
-                if (data.answer) return data.answer;
-                return "🤖 Respuesta desde la nube: " + JSON.stringify(data).slice(0, 150);
-            } catch (error) {
-                console.warn("Error conectando con API cloud:", error);
-                return "⚠️ No se pudo conectar con el servicio en la nube. Verifica la URL o tu conexión. (Modo offline activado)";
+        try {
+            // Usar la API pública
+            const response = await fetch(`https://api.popcat.xyz/chat?msg=${encodeURIComponent(userMessage)}`);
+            if (!response.ok) throw new Error('API error');
+            const data = await response.json();
+            if (data && data.response) {
+                return data.response;
+            } else {
+                throw new Error('Respuesta inválida');
             }
-        } 
-        else {
-            const msg = userMessage.toLowerCase().trim();
-            
-            if (msg.includes("hola") || msg.includes("buenas") || msg.includes("saludos")) {
-                return "👋 ¡Hola! Soy tu asistente en la nube. ¿Cómo puedo ayudarte hoy? Puedes preguntarme sobre IA, despliegues o lo que necesites.";
-            }
-            if (msg.includes("cómo estás") || msg.includes("que tal")) {
-                return "🌟 ¡Excelente! Siempre en línea desde la nube, listo para responder. ¿Y tú, cómo llevas el día?";
-            }
-            if (msg.includes("qué puedes hacer") || msg.includes("funciones") || msg.includes("capacidades")) {
-                return "🧠 Estoy entrenado para responder preguntas, ayudar con código, explicar conceptos de IA y asistir en tareas generales. Además, mi backend está en la nube, ¡escalable y rápido!";
-            }
-            if (msg.includes("nube") || msg.includes("cloud") || msg.includes("despliegue")) {
-                return "☁️ Mi infraestructura corre en la nube: puedes alojarme en AWS, Google Cloud, Azure o cualquier proveedor serverless. La API está preparada para recibir miles de peticiones concurrentes.";
-            }
-            if (msg.includes("api") || msg.includes("conectar") || msg.includes("endpoint")) {
-                return "🔌 Para conectar tu propio frontend, solo necesitas hacer POST a la URL del chatbot con un campo 'message'. Yo responderé con un JSON { reply: '...' }. Revisa la documentación en GitHub.";
-            }
-            if (msg.includes("github") || msg.includes("repositorio") || msg.includes("código")) {
-                return "📦 El proyecto está en GitHub con el backend listo para desplegar en la nube. Puedes clonarlo, personalizar el modelo de IA y subirlo a tu proveedor favorito. ¡Colabora con estrellas! ⭐";
-            }
-            if (msg.includes("gracias") || msg.includes("graciass")) {
-                return "😊 ¡De nada! Estoy para ayudarte. Si tienes más preguntas sobre el proyecto o sobre IA, aquí estoy.";
-            }
-            if (msg.includes("tiempo") || msg.includes("clima")) {
-                return "🌤️ Aunque no tengo acceso en tiempo real al clima sin integración, puedo sugerirte que agregues una API meteorológica a mi backend cloud. ¡Es fácil!";
-            }
-            if (msg.includes("quien te creo") || msg.includes("creador")) {
-                return "👨‍💻 Fui desarrollado como proyecto demostrativo de chatbot con IA desplegado en la nube. Todo el código está disponible en GitHub bajo licencia MIT.";
-            }
-            
-            return `🤖 (Modo demostración IA) Recibí tu mensaje: "${userMessage}". ¡Excelente pregunta! Puedes conectar tu propio modelo de lenguaje o endpoint cloud editando la variable API_URL en el código. Actualmente este demo simula respuestas coherentes para mostrar la experiencia de chatbot. Si deseas respuestas reales con LLM, despliega tu backend favorito y asígnale la URL.`;
+        } catch (error) {
+            console.warn('API falló, usando modo local:', error);
+            return getLocalReply(userMessage);
         }
     }
-    
+
     async function sendMessage() {
         if (isLoading) return;
         const message = userInput.value.trim();
@@ -672,17 +558,11 @@
         isLoading = true;
         showTypingIndicator();
         
-        try {
-            const reply = await getBotReply(message);
-            hideTypingIndicator();
-            addMessage(reply, false);
-        } catch (error) {
-            hideTypingIndicator();
-            console.error("Error en la respuesta:", error);
-            addMessage("❌ Ocurrió un error al procesar tu mensaje. Revisa la consola o la conexión con la API.", false);
-        } finally {
-            isLoading = false;
-        }
+        const reply = await getBotReply(message);
+        hideTypingIndicator();
+        addMessage(reply, false);
+        
+        isLoading = false;
     }
     
     function clearChat() {
@@ -693,7 +573,7 @@
         welcomeDiv.className = 'message bot';
         const welcomeBubble = document.createElement('div');
         welcomeBubble.className = 'bubble';
-        welcomeBubble.innerText = '✨ ¡Hola! Soy el asistente IA desplegado en la nube. Pregúntame sobre tecnología, consejos o simplemente conversemos. ¿En qué te ayudo?';
+        welcomeBubble.innerText = '✨ ¡Hola! Soy un asistente con IA real. Pregúntame lo que quieras, desde tecnología hasta consejos.';
         welcomeDiv.appendChild(welcomeBubble);
         chatMessagesDiv.appendChild(welcomeDiv);
         hideTypingIndicator();
@@ -708,11 +588,7 @@
     });
     clearBtn.addEventListener('click', clearChat);
     
-    if (!API_URL) {
-        console.log("🔧 [Demo] Modo IA local activado. Para conectar tu chatbot real en la nube, define la constante API_URL con tu endpoint.");
-    } else {
-        console.log(`✅ Conectado a API cloud: ${API_URL}`);
-    }
+    console.log("✅ Chatbot listo, usando API pública de IA");
 </script>
 </body>
 </html>
