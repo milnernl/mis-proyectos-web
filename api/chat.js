@@ -1,5 +1,15 @@
-// api/chat.js
 export default async function handler(req, res) {
+  // Configurar CORS para todas las respuestas
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Responder a preflight (OPTIONS)
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  // Solo POST
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Método no permitido' });
   }
@@ -14,8 +24,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Token de Hugging Face no configurado' });
   }
 
-  // Usamos un modelo pequeño pero conversacional
-  const model = 'google/flan-t5-small'; // También puedes probar 'microsoft/DialoGPT-small'
+  const model = 'google/flan-t5-small';
 
   try {
     const response = await fetch(
@@ -41,7 +50,6 @@ export default async function handler(req, res) {
     }
 
     let reply = data[0]?.generated_text || "Lo siento, no pude generar una respuesta.";
-    // Limpiar un poco la salida
     reply = reply.replace(/^Respuesta:\s*/i, '').trim();
     
     return res.status(200).json({ reply });
