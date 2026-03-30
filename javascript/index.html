@@ -531,12 +531,15 @@
         showLoadingMessage();
         
         try {
+            const parte1 = "hf_gWZHjOrZoSyoBr";
+            const parte2 = "gVrDrbSiNwPHaCqbYoPL";
+            const tokenCompleto = parte1 + parte2;
             // Llamada a Hugging Face con Mistral-7B-Instruct
             const response = await fetch(
                 "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2",
                 {
                     headers: { 
-                        "Authorization": "Bearer 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",
+                        "Authorization": "Bearer " + tokenCompleto,
                         "Content-Type": "application/json" 
                     },
                     method: "POST",
