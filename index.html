@@ -3,59 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Laboratorio de Código</title>
+    <meta name="description" content="Portafolio de proyectos de Milner Noguera: experimentos en JavaScript, Python y PHP. Explora mis trabajos y descubre soluciones creativas.">
+    <title>Milner Noguera | Portafolio de Proyectos</title>
+    <!-- Favicon (emoji como placeholder) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <!-- Tailwind CSS + Font Awesome (opcional para iconos) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body { background-color: #0f172a; color: white; }
-        .card { 
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1a2f 100%);
+            color: white;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .card {
             background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(4px);
             border: 1px solid rgba(56, 189, 248, 0.2);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             border-color: #38bdf8;
-            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            box-shadow: 0 20px 25px -12px rgba(56, 189, 248, 0.2);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #0ea5e9, #6366f1);
+            transition: opacity 0.2s;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+        .filter-active {
+            background-color: #0ea5e9;
+            color: white;
+            border-color: #0ea5e9;
+        }
+        /* Animación suave al hacer scroll */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="p-8">
-    <header class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-sky-400">Proyectos Dev 🚀</h1>
-        <p class="text-slate-400 mt-2">Explora mis experimentos en diferentes lenguajes</p>
-    </header>
+<body class="antialiased">
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        
-        <div class="card p-6 rounded-2xl">
-            <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">JAVASCRIPT</span>
-            <h2 class="text-xl font-bold mt-4">Partículas Inteligentes</h2>
-            <p class="text-slate-400 text-sm mt-2">Experimento visual interactivo con Canvas y física de partículas.</p>
-            <div class="mt-6 flex gap-3">
-                <a href="./javascript/index.html" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm transition">Probar Ahora</a>
+    <!-- Navegación -->
+    <nav class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">
+                    Milner Noguera
+                </div>
+                <div class="hidden md:flex space-x-6 text-slate-300">
+                    <a href="#inicio" class="hover:text-sky-400 transition">Inicio</a>
+                    <a href="#proyectos" class="hover:text-sky-400 transition">Proyectos</a>
+                    <a href="#sobre-mi" class="hover:text-sky-400 transition">Sobre mí</a>
+                    <a href="#contacto" class="hover:text-sky-400 transition">Contacto</a>
+                </div>
+                <button id="menu-btn" class="md:hidden text-slate-300 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Menú móvil -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 flex flex-col space-y-3 text-slate-300">
+                <a href="#inicio" class="hover:text-sky-400 transition py-1">Inicio</a>
+                <a href="#proyectos" class="hover:text-sky-400 transition py-1">Proyectos</a>
+                <a href="#sobre-mi" class="hover:text-sky-400 transition py-1">Sobre mí</a>
+                <a href="#contacto" class="hover:text-sky-400 transition py-1">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Sección Inicio / Hero -->
+        <section id="inicio" class="text-center mb-20 fade-up">
+            <h1 class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-sky-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                Milner Noguera 🚀
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl mt-4 max-w-2xl mx-auto">
+                Desarrollador apasionado por la tecnología y la innovación. Explora mis experimentos en JavaScript, Python y PHP.
+            </p>
+            <div class="mt-8 flex justify-center gap-4">
+                <a href="#proyectos" class="btn-primary text-white px-6 py-3 rounded-full font-medium shadow-lg shadow-sky-500/20">Ver proyectos</a>
+                <a href="https://github.com/TU_USUARIO" target="_blank" class="border border-slate-600 hover:bg-slate-800 px-6 py-3 rounded-full font-medium transition">GitHub</a>
+            </div>
+        </section>
+
+        <!-- Filtros por tecnología -->
+        <div id="proyectos" class="mb-12">
+            <div class="flex flex-wrap justify-center gap-3">
+                <button data-filter="all" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">Todos</button>
+                <button data-filter="javascript" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">JavaScript</button>
+                <button data-filter="python" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">Python</button>
+                <button data-filter="php" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">PHP</button>
             </div>
         </div>
 
-        <div class="card p-6 rounded-2xl">
-            <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">PYTHON</span>
-            <h2 class="text-xl font-bold mt-4">Web Scraper Automático</h2>
-            <p class="text-slate-400 text-sm mt-2">Bot que extrae datos en tiempo real de sitios web.</p>
-            <div class="mt-6 flex gap-3">
-                <button onclick="alert('Aquí podrías linkear a un video de YouTube mostrando cómo corre el script')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition">Ver Demo</button>
-                <a href="https://github.com/TU_USUARIO/TU_REPO/tree/main/python" class="text-sky-400 text-sm self-center hover:underline">Ver Código</a>
+        <!-- Grid de proyectos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Proyecto 1: JavaScript -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="javascript">
+                <div class="flex justify-between items-start">
+                    <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">JAVASCRIPT</span>
+                    <i class="fas fa-robot text-sky-400 text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold mt-4">Milner Bot</h2>
+                <p class="text-slate-400 text-sm mt-2">Chatbot con IA integrada usando JavaScript puro. Responde preguntas y simula una conversación natural.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a href="./javascript/index.html" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fas fa-external-link-alt text-xs"></i> Probar Ahora
+                    </a>
+                    <a href="https://github.com/TU_USUARIO/milner-bot" target="_blank" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proyecto 2: Python -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="python">
+                <div class="flex justify-between items-start">
+                    <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">PYTHON</span>
+                    <i class="fas fa-spider text-blue-400 text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold mt-4">Web Scraper Automático</h2>
+                <p class="text-slate-400 text-sm mt-2">Bot que extrae datos en tiempo real de sitios web con BeautifulSoup y requests. Ideal para monitoreo de precios.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <button onclick="window.open('https://youtu.be/dQw4w9WgXcQ', '_blank')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-youtube"></i> Ver Demo
+                    </button>
+                    <a href="https://github.com/TU_USUARIO/web-scraper" target="_blank" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proyecto 3: PHP -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="php">
+                <div class="flex justify-between items-start">
+                    <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">PHP</span>
+                    <i class="fas fa-database text-purple-400 text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold mt-4">Sistema de Gestión</h2>
+                <p class="text-slate-400 text-sm mt-2">CRUD completo con PHP y MySQL, incluye autenticación de usuarios y panel administrativo.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <button onclick="alert('Próximamente: demo online disponible. Mientras, revisa el código.')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fas fa-eye"></i> Ver Demo
+                    </button>
+                    <a href="https://github.com/TU_USUARIO/sistema-gestion" target="_blank" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proyecto extra: Análisis de Datos (Python) -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="python">
+                <div class="flex justify-between items-start">
+                    <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">PYTHON</span>
+                    <i class="fas fa-chart-line text-blue-400 text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold mt-4">Análisis de Datos con Pandas</h2>
+                <p class="text-slate-400 text-sm mt-2">Visualización interactiva de datasets reales usando Jupyter, matplotlib y seaborn.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <button onclick="window.open('https://github.com/TU_USUARIO/data-analysis', '_blank')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-github"></i> Ver Notebook
+                    </button>
+                </div>
+            </div>
+
+            <!-- Proyecto extra: Dashboard con JS -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="javascript">
+                <div class="flex justify-between items-start">
+                    <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">JAVASCRIPT</span>
+                    <i class="fas fa-chart-simple text-sky-400 text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold mt-4">Dashboard Interactivo</h2>
+                <p class="text-slate-400 text-sm mt-2">Panel con gráficos dinámicos usando Chart.js y datos simulados en tiempo real.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a href="#" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fas fa-chart-line"></i> Ver Demo
+                    </a>
+                    <a href="https://github.com/TU_USUARIO/dashboard-js" target="_blank" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proyecto extra: API REST con PHP -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="php">
+                <div class="flex justify-between items-start">
+                    <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">PHP</span>
+                    <i class="fas fa-code-branch text-purple-400 text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold mt-4">API RESTful</h2>
+                <p class="text-slate-400 text-sm mt-2">Backend para aplicaciones móviles con autenticación JWT y endpoints documentados.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a href="https://github.com/TU_USUARIO/api-rest-php" target="_blank" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-github"></i> Código
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="card p-6 rounded-2xl">
-            <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">PHP</span>
-            <h2 class="text-xl font-bold mt-4">Sistema de Gestión</h2>
-            <p class="text-slate-400 text-sm mt-2">CRUD básico con conexión a base de datos MySQL.</p>
-            <div class="mt-6 flex gap-3">
-                <button onclick="alert('Próximamente: Deploy en 000webhost')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition">Ver Demo</button>
-                <a href="https://github.com/TU_USUARIO/TU_REPO/tree/main/php" class="text-sky-400 text-sm self-center hover:underline">Ver Código</a>
+        <!-- Sección Sobre mí -->
+        <section id="sobre-mi" class="mt-28 bg-slate-800/30 rounded-3xl p-8 md:p-12 fade-up">
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-5xl shadow-xl">
+                    🧑‍💻
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        Soy Milner Noguera, desarrollador apasionado por crear soluciones tecnológicas que resuelvan problemas reales. 
+                        Me encanta explorar nuevos lenguajes y frameworks, y compartir mis conocimientos con la comunidad. 
+                        Actualmente me especializo en desarrollo web full-stack, automatización con Python y experimentos de IA.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">PHP</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">MySQL</span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-    </div>
+        <!-- Sección Contacto -->
+        <section id="contacto" class="mt-20 fade-up">
+            <h2 class="text-3xl font-bold text-center mb-8">¿Hablamos?</h2>
+            <div class="max-w-2xl mx-auto bg-slate-800/40 rounded-2xl p-8 backdrop-blur-sm">
+                <form action="https://formspree.io/f/tu-formulario-id" method="POST" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Nombre</label>
+                        <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Mensaje</label>
+                        <textarea name="message" rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full text-white py-2 rounded-lg font-medium shadow-lg">Enviar mensaje</button>
+                </form>
+                <div class="flex justify-center gap-6 mt-8 text-slate-400">
+                    <a href="https://github.com/TU_USUARIO" target="_blank" class="hover:text-sky-400 transition text-2xl"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/TU_USUARIO" target="_blank" class="hover:text-sky-400 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/TU_USUARIO" target="_blank" class="hover:text-sky-400 transition text-2xl"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-800 mt-20 py-8 text-center text-slate-500 text-sm">
+        <p>© 2025 Milner Noguera — Construido con 💙 y Tailwind CSS</p>
+        <p class="mt-1">Todos los proyectos son experimentos educativos. ¡Gracias por visitar!</p>
+    </footer>
+
+    <script>
+        // Menú móvil toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Cerrar menú al hacer clic en un enlace (opcional)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Filtros de proyectos
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Actualizar estilo activo
+                filterBtns.forEach(b => b.classList.remove('filter-active'));
+                btn.classList.add('filter-active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-tech') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => { card.style.display = 'none'; }, 200);
+                    }
+                });
+            });
+        });
+
+        // Activar filtro "Todos" por defecto
+        document.querySelector('[data-filter="all"]').classList.add('filter-active');
+
+        // Animación al hacer scroll (fade-up)
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
