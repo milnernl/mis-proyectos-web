@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Laboratorio de Código</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: white; }
+        .card { 
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #38bdf8;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+    </style>
+</head>
+<body class="p-8">
+    <header class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-sky-400">Proyectos Dev 🚀</h1>
+        <p class="text-slate-400 mt-2">Explora mis experimentos en diferentes lenguajes</p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        
+        <div class="card p-6 rounded-2xl">
+            <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">JAVASCRIPT</span>
+            <h2 class="text-xl font-bold mt-4">Partículas Inteligentes</h2>
+            <p class="text-slate-400 text-sm mt-2">Experimento visual interactivo con Canvas y física de partículas.</p>
+            <div class="mt-6 flex gap-3">
+                <a href="./javascript/index.html" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm transition">Probar Ahora</a>
+            </div>
+        </div>
+
+        <div class="card p-6 rounded-2xl">
+            <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">PYTHON</span>
+            <h2 class="text-xl font-bold mt-4">Web Scraper Automático</h2>
+            <p class="text-slate-400 text-sm mt-2">Bot que extrae datos en tiempo real de sitios web.</p>
+            <div class="mt-6 flex gap-3">
+                <button onclick="alert('Aquí podrías linkear a un video de YouTube mostrando cómo corre el script')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition">Ver Demo</button>
+                <a href="https://github.com/TU_USUARIO/TU_REPO/tree/main/python" class="text-sky-400 text-sm self-center hover:underline">Ver Código</a>
+            </div>
+        </div>
+
+        <div class="card p-6 rounded-2xl">
+            <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">PHP</span>
+            <h2 class="text-xl font-bold mt-4">Sistema de Gestión</h2>
+            <p class="text-slate-400 text-sm mt-2">CRUD básico con conexión a base de datos MySQL.</p>
+            <div class="mt-6 flex gap-3">
+                <button onclick="alert('Próximamente: Deploy en 000webhost')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition">Ver Demo</button>
+                <a href="https://github.com/TU_USUARIO/TU_REPO/tree/main/php" class="text-sky-400 text-sm self-center hover:underline">Ver Código</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
