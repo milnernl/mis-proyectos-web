@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de proyectos de Milner Noguera: experimentos en JavaScript, Python y PHP. Explora mis trabajos y descubre soluciones creativas.">
+    <meta name="description" content="Portafolio de Milner Noguera - Proyectos en JavaScript, Python, PHP, Java, C y más. Ingeniero en formación y apasionado por la tecnología.">
     <title>Milner Noguera | Portafolio de Proyectos</title>
-    <!-- Favicon (emoji como placeholder) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
-    <!-- Tailwind CSS + Font Awesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -39,7 +37,6 @@
             color: white;
             border-color: #0ea5e9;
         }
-        /* Animación suave al hacer scroll */
         .fade-up {
             opacity: 0;
             transform: translateY(20px);
@@ -49,7 +46,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Asegurar que la 'g' no se corte */
         .gradient-text {
             background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
             background-clip: text;
@@ -59,11 +55,14 @@
             line-height: 1.3;
             padding-bottom: 0.15em;
         }
+        .tech-badge {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(2px);
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Navegación -->
     <nav class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
@@ -80,7 +79,6 @@
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
-            <!-- Menú móvil -->
             <div id="mobile-menu" class="hidden md:hidden pb-4 flex flex-col space-y-3 text-slate-300">
                 <a href="#inicio" class="hover:text-sky-400 transition py-1">Inicio</a>
                 <a href="#proyectos" class="hover:text-sky-400 transition py-1">Proyectos</a>
@@ -91,42 +89,41 @@
     </nav>
 
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- Sección Inicio / Hero -->
         <section id="inicio" class="text-center mb-20 fade-up">
             <h1 class="text-5xl md:text-6xl font-extrabold">
                 <span class="gradient-text">Milner Noguera 🚀</span>
             </h1>
             <p class="text-slate-400 text-lg md:text-xl mt-4 max-w-2xl mx-auto">
-                Desarrollador apasionado por la tecnología y la innovación. Explora mis experimentos en JavaScript, Python y PHP.
+                22 años | Desarrollador full-stack y entusiasta de la IA. Explora mis proyectos en JavaScript, Python, PHP, Java, C y más.
             </p>
             <div class="mt-8 flex justify-center gap-4">
                 <a href="#proyectos" class="btn-primary text-white px-6 py-3 rounded-full font-medium shadow-lg shadow-sky-500/20">Ver proyectos</a>
-                <a href="https://wa.me/TU_NUMERO?text=Hola%20Milner,%20vi%20tu%20portafolio%20y%20me%20gustaría%20conversar" target="_blank" class="border border-slate-600 hover:bg-slate-800 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
+                <a href="https://wa.me/595981352426?text=Hola%20Milner,%20vi%20tu%20portafolio%20y%20me%20gustaría%20conversar" target="_blank" class="border border-slate-600 hover:bg-slate-800 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
                     <i class="fab fa-whatsapp text-green-400"></i> WhatsApp
                 </a>
             </div>
         </section>
 
-        <!-- Filtros por tecnología -->
         <div id="proyectos" class="mb-12">
             <div class="flex flex-wrap justify-center gap-3">
                 <button data-filter="all" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">Todos</button>
                 <button data-filter="javascript" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">JavaScript</button>
                 <button data-filter="python" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">Python</button>
                 <button data-filter="php" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">PHP</button>
+                <button data-filter="java" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">Java</button>
+                <button data-filter="c" class="filter-btn px-5 py-2 rounded-full border border-slate-700 text-sm font-medium hover:bg-slate-800 transition">C</button>
             </div>
         </div>
 
-        <!-- Grid de proyectos -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Proyecto 1: JavaScript -->
-            <div class="card rounded-2xl p-6 project-card" data-tech="javascript">
+            <!-- Milner Bot - PHP + JS + SQL + Google AI API -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="php">
                 <div class="flex justify-between items-start">
-                    <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">JAVASCRIPT</span>
+                    <span class="bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded">PHP · JS · SQL</span>
                     <i class="fas fa-robot text-sky-400 text-xl"></i>
                 </div>
-                <h2 class="text-xl font-bold mt-4">Milner Bot</h2>
-                <p class="text-slate-400 text-sm mt-2">Chatbot con IA que simula ser Milner Noguera. Responde preguntas y simula una conversación natural.</p>
+                <h2 class="text-xl font-bold mt-4">Milner Bot (AI)</h2>
+                <p class="text-slate-400 text-sm mt-2">Chatbot inteligente con PHP, JavaScript y MySQL, integrando Google AI APIs (Gemini) para conversaciones naturales. Proyecto 2026.</p>
                 <div class="mt-5 flex flex-wrap gap-3">
                     <a href="https://chatbot-ia.infinityfree.me/" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
                         <i class="fas fa-external-link-alt text-xs"></i> Probar Ahora
@@ -134,83 +131,82 @@
                 </div>
             </div>
 
-            <!-- Proyecto 2: Python -->
+            <!-- Batalla Naval + Sopa de Letras - Python 2024 -->
             <div class="card rounded-2xl p-6 project-card" data-tech="python">
                 <div class="flex justify-between items-start">
-                    <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">PYTHON</span>
-                    <i class="fas fa-spider text-blue-400 text-xl"></i>
+                    <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">PYTHON · 2024</span>
+                    <i class="fas fa-gamepad text-blue-400 text-xl"></i>
                 </div>
-                <h2 class="text-xl font-bold mt-4">Web Scraper Automático</h2>
-                <p class="text-slate-400 text-sm mt-2">Bot que extrae datos en tiempo real de sitios web con BeautifulSoup y requests. Ideal para monitoreo de precios.</p>
+                <h2 class="text-xl font-bold mt-4">Batalla Naval + Sopa de Letras</h2>
+                <p class="text-slate-400 text-sm mt-2">Proyecto estudiantil: dos juegos clásicos en una sola aplicación. Batalla Naval con lógica de tablero y Sopa de Letras interactiva. Desarrollado con Python puro.</p>
                 <div class="mt-5 flex flex-wrap gap-3">
-                    <button onclick="window.open('https://youtu.be/dQw4w9WgXcQ', '_blank')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
-                        <i class="fab fa-youtube"></i> Ver Demo
-                    </button>
+                    <a href="https://github.com/milnernl/batalla-naval-y-sopa-letras.git" target="_blank" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-github"></i> Ver código
+                    </a>
                 </div>
             </div>
-
-            <!-- Proyecto 3: PHP -->
-            <div class="card rounded-2xl p-6 project-card" data-tech="php">
+            
+            <!-- N en rayas en C 2024 -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="c">
                 <div class="flex justify-between items-start">
-                    <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">PHP</span>
-                    <i class="fas fa-database text-purple-400 text-xl"></i>
+                    <span class="bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded">LENGUAJE C · 2024</span>
+                    <i class="fas fa-bomb text-gray-300 text-xl"></i>
                 </div>
-                <h2 class="text-xl font-bold mt-4">Sistema de Gestión</h2>
-                <p class="text-slate-400 text-sm mt-2">CRUD completo con PHP y MySQL, incluye autenticación de usuarios y panel administrativo.</p>
+                <h2 class="text-xl font-bold mt-4">N en rayas en Consola</h2>
+                <p class="text-slate-400 text-sm mt-2">Clásico juego de tres en raya con tamaño de tablero configurable. Implementado en C con lógica de matrices y validación de victoria. Proyecto de programación estructurada.</p>
                 <div class="mt-5 flex flex-wrap gap-3">
-                    <button onclick="alert('Próximamente: demo online disponible. Mientras, revisa el código en mi repositorio personal.')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
-                        <i class="fas fa-eye"></i> Ver Demo
-                    </button>
-                </div>
-            </div>
-
-            <!-- Proyecto extra: Análisis de Datos (Python) -->
-            <div class="card rounded-2xl p-6 project-card" data-tech="python">
-                <div class="flex justify-between items-start">
-                    <span class="bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">PYTHON</span>
-                    <i class="fas fa-chart-line text-blue-400 text-xl"></i>
-                </div>
-                <h2 class="text-xl font-bold mt-4">Análisis de Datos con Pandas</h2>
-                <p class="text-slate-400 text-sm mt-2">Visualización interactiva de datasets reales usando Jupyter, matplotlib y seaborn.</p>
-                <div class="mt-5 flex flex-wrap gap-3">
-                    <button onclick="alert('Próximamente disponible. Contáctame por WhatsApp para más detalles.')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
-                        <i class="fas fa-info-circle"></i> Más info
-                    </button>
-                </div>
-            </div>
-
-            <!-- Proyecto extra: Dashboard con JS -->
-            <div class="card rounded-2xl p-6 project-card" data-tech="javascript">
-                <div class="flex justify-between items-start">
-                    <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">JAVASCRIPT</span>
-                    <i class="fas fa-chart-simple text-sky-400 text-xl"></i>
-                </div>
-                <h2 class="text-xl font-bold mt-4">Dashboard Interactivo</h2>
-                <p class="text-slate-400 text-sm mt-2">Panel con gráficos dinámicos usando Chart.js y datos simulados en tiempo real.</p>
-                <div class="mt-5 flex flex-wrap gap-3">
-                    <a href="#" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
-                        <i class="fas fa-chart-line"></i> Ver Demo
+                    <a href="https://github.com/milnernl/N-En-Raya-C.git" target="_blank" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fab fa-github"></i> Ver código
                     </a>
                 </div>
             </div>
 
-            <!-- Proyecto extra: API REST con PHP -->
+            <!-- Juego de Memoria - JavaScript -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="javascript">
+                <div class="flex justify-between items-start">
+                    <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded">JAVASCRIPT</span>
+                    <i class="fas fa-puzzle-piece text-sky-400 text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold mt-4">Juego de Memoria Interactivo</h2>
+                <p class="text-slate-400 text-sm mt-2">Pon a prueba tu memoria con este juego de cartas. Desarrollado con HTML5, CSS3 y JS puro. Ideal para entrenar concentración.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a href="https://milnernl.github.io/juego-de-memoria/" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fas fa-play"></i> Jugar Ahora
+                    </a>
+                </div>
+            </div>
+
+            <!-- Saile Bank - Java 2024 -->
+            <div class="card rounded-2xl p-6 project-card" data-tech="java">
+                <div class="flex justify-between items-start">
+                    <span class="bg-amber-600 text-white text-xs font-bold px-2 py-1 rounded">JAVA · 2024</span>
+                    <i class="fas fa-university text-amber-400 text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold mt-4">Saile Bank</h2>
+                <p class="text-slate-400 text-sm mt-2">Simulación bancaria completa: cuentas, transferencias, depósitos y gestión de usuarios con Java en NetBeans. Proyecto universitario con enfoque en POO.</p>
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <button onclick="alert('Demo en video disponible. Escríbeme por WhatsApp para más información.')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fas fa-video"></i> Ver presentación
+                    </button>
+                </div>
+            </div>
+
+            <!-- Visítate - PHP, JS, SQL 2021 -->
             <div class="card rounded-2xl p-6 project-card" data-tech="php">
                 <div class="flex justify-between items-start">
-                    <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">PHP</span>
-                    <i class="fas fa-code-branch text-purple-400 text-xl"></i>
+                    <span class="bg-purple-500 text-white text-xs font-bold px-2 py-1 rounded">PHP · JS · SQL</span>
+                    <i class="fas fa-address-card text-purple-400 text-xl"></i>
                 </div>
-                <h2 class="text-xl font-bold mt-4">API RESTful</h2>
-                <p class="text-slate-400 text-sm mt-2">Backend para aplicaciones móviles con autenticación JWT y endpoints documentados.</p>
+                <h2 class="text-xl font-bold mt-4">Visítate</h2>
+                <p class="text-slate-400 text-sm mt-2">Sistema web con formulario de login básico, registro de visitas y panel de control. Tecnologías: PHP, JavaScript, MySQL. Proyecto estudiantil 2021.</p>
                 <div class="mt-5 flex flex-wrap gap-3">
-                    <button onclick="alert('Documentación disponible bajo solicitud. Escríbeme por WhatsApp.')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
-                        <i class="fas fa-file-alt"></i> Solicitar info
+                    <button onclick="alert('Código fuente disponible bajo solicitud. Contáctame por WhatsApp.')" class="border border-slate-500 hover:bg-slate-800 px-4 py-2 rounded-lg text-sm transition inline-flex items-center gap-1">
+                        <i class="fas fa-code"></i> Solicitar código
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Sección Sobre mí -->
         <section id="sobre-mi" class="mt-28 bg-slate-800/30 rounded-3xl p-8 md:p-12 fade-up">
             <div class="flex flex-col md:flex-row gap-10 items-center">
                 <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-5xl shadow-xl">
@@ -219,32 +215,36 @@
                 <div class="flex-1 text-center md:text-left">
                     <h2 class="text-3xl font-bold mb-4">Sobre mí</h2>
                     <p class="text-slate-300 text-lg leading-relaxed">
-                        Soy Milner Noguera, desarrollador apasionado por crear soluciones tecnológicas que resuelvan problemas reales. 
-                        Actualmente estudio <strong class="text-sky-300">Ingeniería Informática en la Facultad Politecnica - Universidad Nacional de Asuncion </strong>en la que fui el mejor puntaje de ingreso en 2023 y también curso la 
-                        <strong class="text-sky-300">Licenciatura en Inteligencia Artificial y Robótica en la Universidad Americana</strong>. 
-                        Me encanta explorar nuevos lenguajes y frameworks, y compartir mis conocimientos con la comunidad. 
-                        Me especializo en desarrollo web full-stack, automatización con Python y experimentos de IA.
+                        ¡Hola! Soy <strong class="text-sky-300">Milner Noguera</strong>, tengo <strong class="text-white">22 años</strong> y soy un apasionado desarrollador. 
+                        Mi formación comenzó con la <strong>Tecnicatura en Reparación de Computadoras (2019)</strong> y el <strong>Bachillerato Técnico en Informática en el Colegio Salesianito (2021)</strong>. 
+                        Actualmente curso <strong class="text-sky-300">Ingeniería Informática en la FP-UNA</strong> (ingreso con mejor puntaje en 2023) y la <strong class="text-sky-300">Licenciatura en Inteligencia Artificial y Robótica en la Universidad Americana</strong>. 
+                        También he aprobado múltiples cursos en SNPP, OIE y otras instituciones, fortaleciendo mis habilidades técnicas y de gestión.
+                    </p>
+                    <p class="text-slate-300 mt-3">
+                        Me especializo en desarrollo web full-stack, automatización con Python, integración de APIs de IA y proyectos académicos en Java, C y PHP. 
+                        Disfruto crear soluciones innovadoras y compartir conocimiento con la comunidad.
                     </p>
                     <div class="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
                         <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
                         <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">Python</span>
                         <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">PHP</span>
-                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">Java</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">C</span>
                         <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">MySQL</span>
+                        <span class="bg-slate-700 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Contacto -->
         <section id="contacto" class="mt-20 fade-up">
-            <h2 class="text-3xl font-bold text-center mb-8">¿Hablamos?</h2>
             <div class="max-w-2xl mx-auto bg-slate-800/40 rounded-2xl p-8 backdrop-blur-sm">
-                <div class="text-center mb-6">
-                    <p class="text-slate-300">Puedes escribirme directamente por WhatsApp y te responderé lo antes posible.</p>
+                <div class="text-center mb-6 space-y-2">
+                    <p class="text-slate-300">📞 <strong>WhatsApp:</strong> <a href="https://wa.me/595981352426" class="text-sky-400 hover:underline">+595 981 352426</a></p>
+                    <p class="text-slate-300">✉️ <strong>Email institucional:</strong> <a href="mailto:milnernogueral@fpuna.edu.py" class="text-sky-400 hover:underline">milnernogueral@fpuna.edu.py</a></p>
                 </div>
                 <div class="flex justify-center">
-                    <a href="https://wa.me/TU_NUMERO?text=Hola%20Milner,%20vi%20tu%20portafolio%20y%20me%20gustaría%20conversar" target="_blank" class="btn-primary inline-flex items-center gap-2 text-white px-8 py-4 rounded-full font-medium shadow-lg shadow-green-500/20 text-lg">
+                    <a href="https://wa.me/595981352426?text=Hola%20Milner,%20vi%20tu%20portafolio%20y%20me%20gustaría%20conversar" target="_blank" class="btn-primary inline-flex items-center gap-2 text-white px-8 py-4 rounded-full font-medium shadow-lg shadow-green-500/20 text-lg">
                         <i class="fab fa-whatsapp text-2xl"></i> Conversar por WhatsApp
                     </a>
                 </div>
@@ -253,12 +253,10 @@
     </main>
 
     <footer class="border-t border-slate-800 mt-20 py-8 text-center text-slate-500 text-sm">
-        <p>© 2025 Milner Noguera — Construido con 💙 y Tailwind CSS</p>
-        <p class="mt-1">Todos los proyectos son experimentos educativos. ¡Gracias por visitar!</p>
+        <p>© 2025 Milner Noguera</p>
     </footer>
 
     <script>
-        // Menú móvil toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         if (menuBtn && mobileMenu) {
@@ -266,15 +264,12 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
-
-        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        // Filtros de proyectos
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
 
@@ -282,7 +277,6 @@
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => b.classList.remove('filter-active'));
                 btn.classList.add('filter-active');
-                
                 const filterValue = btn.getAttribute('data-filter');
                 
                 projectCards.forEach(card => {
@@ -298,10 +292,8 @@
             });
         });
 
-        // Activar filtro "Todos" por defecto
         document.querySelector('[data-filter="all"]').classList.add('filter-active');
 
-        // Animación al hacer scroll (fade-up)
         const fadeElements = document.querySelectorAll('.fade-up');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
